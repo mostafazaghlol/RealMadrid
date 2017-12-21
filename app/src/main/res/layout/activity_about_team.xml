@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.realmadrid.AboutTeam"
+    android:background="@color/Quiz_cat">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/realmadrid" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full name "
+                android:paddingLeft="10dp"
+                android:textColor="@color/textprimary"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Real Madrid Club de Fútbol "
+                android:paddingLeft="100dp"
+                android:textColor="@color/textprimary2"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nickname(s)"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textprimary"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Los Blancos (The Whites)
+Los Merengues (The Meringues)
+Los Vikingos (The Vikings)"
+                android:paddingLeft="100dp"
+                android:textColor="@color/textprimary2"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Short name "
+                android:paddingLeft="10dp"
+                android:textColor="@color/textprimary"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Real, RM, RMA, RMD"
+                android:paddingLeft="100dp"
+                android:textColor="@color/textprimary2"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Founded"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textprimary"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 March 1902 as Madrid Football Club"
+                android:paddingLeft="100dp"
+                android:textColor="@color/textprimary2"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ground "
+                android:paddingLeft="10dp"
+                android:textColor="@color/textprimary"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Santiago Bernabéu Stadium"
+                android:paddingLeft="100dp"
+                android:textColor="@color/textprimary2"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacity"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textprimary"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="81,044"
+                android:paddingLeft="100dp"
+                android:textColor="@color/textprimary2"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="President"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textprimary"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Florentino Pérez"
+                android:paddingLeft="100dp"
+                android:textColor="@color/textprimary2"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Head coach"
+                android:paddingLeft="10dp"
+                android:textColor="@color/textprimary"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zinedine Zidane"
+                android:paddingLeft="100dp"
+                android:textColor="@color/textprimary2"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+</ScrollView>

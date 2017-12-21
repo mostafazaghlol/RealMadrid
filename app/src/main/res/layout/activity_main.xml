@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.realmadrid.MainActivity">
+
+
+    <TextView
+        android:id="@+id/AboutTeam"
+        style="@style/textViews"
+        android:background="@color/Quiz_cat"
+        android:text="@string/Team"
+
+        />
+    <TextView
+        android:id="@+id/managerTextview"
+        style="@style/textViews"
+        android:background="@color/Manager_cat"
+        android:text="@string/Manager" />
+
+    <TextView
+        android:id="@+id/playerTextview"
+        style="@style/textViews"
+        android:background="@color/Player_cat"
+        android:text="@string/Player"
+
+        />
+
+
+    <TextView
+        android:id="@+id/nextMatchTextview"
+        style="@style/textViews"
+        android:background="@color/nextMatch_cat"
+        android:text="@string/nextMatch" />
+
+
+</LinearLayout>

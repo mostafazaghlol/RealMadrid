@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Player_cat"
+    tools:context="com.example.android.realmadrid.playerdate">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        tools:src="@drawable/bale"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp">
+
+        <TextView
+            style="@style/textplayerdateStyle"
+            tools:text="name Gareth Bale "
+            android:id="@+id/nameProperty"
+            />
+        <TextView
+            style="@style/textplayerdateStyle"
+            tools:text="place of birth "
+            android:layout_below="@id/nameProperty"
+            android:id="@+id/placeOfBirthProperty"
+            />
+        <TextView
+            style="@style/textplayerdateStyle"
+            tools:text="Year of birth "
+            android:id="@+id/yearOfBirthProperty"
+            android:layout_below="@+id/placeOfBirthProperty"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            style="@style/textplayerdateStyle"
+            tools:text="weight"
+            android:layout_below="@id/yearOfBirthProperty"
+            android:id="@+id/weightProperty"
+            />
+        <TextView
+        style="@style/textplayerdateStyle"
+        tools:text="height"
+        android:layout_below="@id/weightProperty"
+        android:id="@+id/heightProperty"
+            />
+    </RelativeLayout>
+</LinearLayout>

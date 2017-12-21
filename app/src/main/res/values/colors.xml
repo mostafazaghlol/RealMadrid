@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--color link "http://colorhunt.co/c/9506" -->
+
+    <color name="colorPrimaryDark">#414141</color>
+    <color name="colorPrimary">#E0E0E0</color>
+    <color name="colorAccent">#FAFAFA</color>
+    <color name="textprimary">#000000</color>
+    <color name="textprimary2">#585858</color>
+    <color name="Manager_cat">#dadbc0</color>
+    <color name="Player_cat">#f8f3d4</color>
+    <color name="Quiz_cat">#e7e9de</color>
+    <color name="nextMatch_cat">#ffde7d</color>
+</resources>
