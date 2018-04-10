@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titlenews"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/Player_cat"
+        tools:text="ESPN}@@>Leganes vs Real Madrid live stream "
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="center"/>
+</RelativeLayout>

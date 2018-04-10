@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.realmadrid">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,9 +24,19 @@
         <activity
             android:name=".player"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".nextMatch" />
-        <activity android:name=".playerdate" />
-        <activity android:name=".AboutTeam"></activity>
+        <activity
+            android:name=".nextMatch"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".playerdate"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AboutTeam"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".newsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".NewsSingleActivity"></activity>
     </application>
 
 </manifest>

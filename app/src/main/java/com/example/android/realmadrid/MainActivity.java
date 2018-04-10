@@ -6,15 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    ArrayList<news> newsList2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //open About Team  page
         TextView mQuizPage=(TextView)findViewById(R.id.AboutTeam);
         mQuizPage.setOnClickListener(new View.OnClickListener() {
@@ -59,8 +58,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        TextView mNewsPage=(TextView)findViewById(R.id.newsTextview);
+        mNewsPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i1 = new Intent(MainActivity.this,newsActivity.class);
+                startActivity(i1);
+            }
+        });
 
 
 
     }
+
+
+
+
+
+
 }

@@ -11,4 +11,8 @@
     <color name="Player_cat">#f8f3d4</color>
     <color name="Quiz_cat">#e7e9de</color>
     <color name="nextMatch_cat">#ffde7d</color>
+    <color name="red">#ff0000</color>
+    <color name="blue">#0000ff</color>
+    <color name="DarkSlateGray">#2F4F4F</color>
+    <color name="white">#ffffff</color>
 </resources>
