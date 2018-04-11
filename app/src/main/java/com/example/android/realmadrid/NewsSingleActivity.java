@@ -1,5 +1,6 @@
 package com.example.android.realmadrid;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -30,8 +32,11 @@ public class NewsSingleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_single);
+        Intent getdata=getIntent();
         progressBar=(ProgressBar)findViewById(R.id.progress);
         final ArrayList<news> newsList=new ArrayList<>();
+        final Intent intent=new Intent(this,News_Details.class);
+
         Response.Listener<String> listener=new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -60,14 +65,24 @@ public class NewsSingleActivity extends AppCompatActivity {
                     mRecyclerView.setHasFixedSize(true);
                     mLayoutManager = new LinearLayoutManager(getApplicationContext());
                     mRecyclerView.setLayoutManager(mLayoutManager);
-                    mAdapter = new MyRecyclerViewAdapter(newsList,getApplicationContext());
+                    mAdapter = new MyRecyclerViewAdapter(newsList, getApplicationContext(), new MyRecyclerViewAdapter.MyClickListener() {
+                        @Override
+                        public void onItemClick(int position, View v) {
+//                            Toast.makeText(NewsSingleActivity.this, "Hi from "+String.valueOf(position), Toast.LENGTH_SHORT).show();
+                       intent.putExtra("title",newsList.get(position).getTitle());
+                       intent.putExtra("url",newsList.get(position).getUrl());
+                       intent.putExtra("urlToimage",newsList.get(position).getUrlToImage());
+                       intent.putExtra("description",newsList.get(position).getDescription());
+                       startActivity(intent);
+                        }
+                    });
                     mRecyclerView.setAdapter(mAdapter);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
         };
-        getNews couponRequest= new getNews(listener);
+        getNews couponRequest= new getNews(listener,getdata.getStringExtra("magazine"));
         RequestQueue queue = Volley.newRequestQueue(NewsSingleActivity.this);
         queue.add(couponRequest);
 
@@ -78,11 +93,11 @@ public class NewsSingleActivity extends AppCompatActivity {
 
 
     public class getNews extends StringRequest {
-        private  final static String newsUrl = "https://newsapi.org/v2/top-headlines?sources=talksport&apiKey=ea44902c99564eab94360fcbdf4f282e";
+        //private  final static String newsUrl = "https://newsapi.org/v2/top-headlines?sources=talksport&apiKey=ea44902c99564eab94360fcbdf4f282e";
         private Map<String,String> params;
 
-        public getNews(Response.Listener<String> listener) {
-            super(Method.GET, newsUrl, listener,null);
+        public getNews(Response.Listener<String> listener,String url) {
+            super(Method.GET, url, listener,null);
             params = new HashMap<>();
         }
 

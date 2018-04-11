@@ -11,5 +11,11 @@
     <string name="marca">Maraca</string>
     <string name="fox">Fox Sports</string>
     <string name="fourfourtwo">fourfour two</string>
+    <string name="titletest">It could be 2005 all over again’ – Arsenal legend Ray Parlour tips Liverpool for Champions League glory</string>
+    <string name="description">description</string>
+    <string name="descriptiontest">Ray Parlour believes Liverpool could be on the road to their sixth Champions League crown after sailing past Manchester City and into the semi-finals. The Reds beat Pep Guardiola’s side for the third time this season, as goals from Mohamed Salah and Roberto F…</string>
+    <string name="Details">Details</string>
+    <string name="gotowebsite">go to web site</string>
+    <string name="faild">No Internet connection !</string>
 
 </resources>

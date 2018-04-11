@@ -3,6 +3,7 @@
     package="com.example.android.realmadrid">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -36,7 +37,10 @@
         <activity
             android:name=".newsActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".NewsSingleActivity"></activity>
+        <activity android:name=".NewsSingleActivity"
+            android:parentActivityName=".newsActivity"/>
+        <activity android:name=".News_Details"
+            android:parentActivityName=".NewsSingleActivity"></activity>
     </application>
 
 </manifest>

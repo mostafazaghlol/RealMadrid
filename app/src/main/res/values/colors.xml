@@ -15,4 +15,5 @@
     <color name="blue">#0000ff</color>
     <color name="DarkSlateGray">#2F4F4F</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 </resources>

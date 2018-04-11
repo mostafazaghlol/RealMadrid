@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -23,7 +24,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     private static MyClickListener myClickListener;
     private Context context;
 
-    public static class DataObjectHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class DataObjectHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         ImageView imageView;
         TextView title;
 
@@ -32,16 +33,20 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             try {
                 imageView = (ImageView) itemView.findViewById(R.id.imageOfNews);
                 title = (TextView) itemView.findViewById(R.id.title);
-                Log.i(LOG_TAG, "Adding Listener");
                 itemView.setOnClickListener(this);
+                Log.i(LOG_TAG, "Adding Listener");
             }catch (Exception e){
                 Log.e(LOG_TAG,e.getMessage()+"  DataObjectHolder   ");
             }
         }
 
+
+
+
         @Override
         public void onClick(View v) {
             myClickListener.onItemClick(getAdapterPosition(), v);
+
         }
     }
 
@@ -49,9 +54,10 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         this.myClickListener = myClickListener;
     }
 
-    public MyRecyclerViewAdapter(ArrayList<news> myDataset, Context mContext) {
+    public MyRecyclerViewAdapter(ArrayList<news> myDataset, Context mContext,MyClickListener myClickListener) {
         mDataset = myDataset;
         context = mContext;
+        this.myClickListener=myClickListener;
     }
 
     @Override
@@ -60,6 +66,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         try {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview, parent, false);
             dataObjectHolder = new DataObjectHolder(view);
+
             return dataObjectHolder;
         }catch (Exception e){
             Log.e(LOG_TAG,e.getMessage()+"    onCreateViewHolder   ");
@@ -73,6 +80,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         try {
             holder.title.setText(mDataset.get(position).getTitle());
             Picasso.with(context).load(mDataset.get(position).getUrlToImage()).into(holder.imageView);
+
         }catch (Exception e){
             Log.e(LOG_TAG,e.getMessage()+"   onBindViewHolder   ");
         }
@@ -96,4 +104,5 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     public interface MyClickListener {
         public void onItemClick(int position, View v);
     }
+
 }
